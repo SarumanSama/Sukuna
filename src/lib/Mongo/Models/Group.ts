@@ -42,7 +42,7 @@ const GroupSchema = new Schema({
     invitelink: {
         type: Boolean,
         required: false,
-        default: false
+        default: true
     }
 })
 
