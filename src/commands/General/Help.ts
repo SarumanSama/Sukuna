@@ -19,10 +19,10 @@ export default class Command extends BaseCommand {
         const n = [
             './assets/videos/Sukuna/sukuna.mp4'
         ]
-        let sukuna = n[Math.floor(Math.random() * n.length)]
-        return void this.client.sendMessage(M.from, { url: sukuna }, MessageType.video, {
+        let kaoi = n[Math.floor(Math.random() * n.length)]
+        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {
             mimetype: Mimetype.gif,
-            caption: `Konnichiwa! *${M.sender.username}*, *I'm Sukunai!* Know your place Fool.
+            caption: `Konnichiwa! *${M.sender.username}*, *I'm Sukuna!* Know your place Fool.
 
 My perfix - !
 
