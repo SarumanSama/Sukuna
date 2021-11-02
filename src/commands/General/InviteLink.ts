@@ -8,7 +8,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'invitelink',
-            aliases: ['invite', 'linkgc'],
+            aliases: ['support', 'linkgc'],
             description: 'Get the group invite link',
             category: 'general',
             usage: `${client.config.prefix}invite`,
@@ -26,10 +26,20 @@ export default class Command extends BaseCommand {
             })
             await this.client.sendMessage(
                 M.sender.jid,
-                `*Invite link:* https://chat.whatsapp.com/${code}`,
+                `*JOIN SUKUNA'S SUPPORT GROUP ✨*
+
+• *1) Fᴏʟʟᴏᴡ Tʜᴇ Gʀᴏᴜᴘ Rᴜʟᴇs*
+
+• *2) Fᴏʟʟᴏᴡ Tʜᴇ Aᴅᴍɪɴs*
+
+• *3) Dᴏɴᴛ Mɪssʙᴇʜᴀᴠᴇ Wɪᴛʜ Aɴʏ Mᴇᴍʙᴇʀs*
+
+*🧣 Tittle: NoFaceWeebs*
+
+*✉ Invite:* https://chat.whatsapp.com/JSpzoZ2bwCa13318uGCaLe`,
                 MessageType.text
             )
-            return void M.reply('Sent you the Group Link in personal message')
+            return void M.reply('Sent you a personal message regarding this')
         } else {
             return void M.reply(
                 `Command not enabled by the admin.\nUse *${this.client.config.prefix}act invitelink* to enable it`
