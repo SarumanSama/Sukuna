@@ -11,21 +11,16 @@ export default class Command extends BaseCommand {
             category: 'general',
             usage: `${client.config.prefix}mods`,
             aliases: ['moderators', 'mod', 'owner'],
-            baseXp: 40
+            baseXp: 20
         })
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        if (!this.client.config.mods || !this.client.config.mods[0]) return void M.reply('*No Mods Set*')
-        const filteredMap = this.client.config.mods.map((mod) => this.client.getContact(mod)).filter((user) => user)
-        let text = '🍥 *Moderators* 🍥\n\n'
-        filteredMap.forEach(
-            (user, index) =>
-                (text += `#${index + 1}\n🎫 *Username: ${
-                    user.notify || user.vname || user.name || 'null'
-                }*\n🍀 *Contact: https://wa.me/+${user?.jid?.split('@')[0]}*\n\n`)
-        )
-        text += `\nTo deploy your own Bot or To support Kaoi👾\nVisit : https://github.com/PrajjwalDatir/Kaoi `
-        return void M.reply(text)
+        return void (await M.reply(`*Sukuna 火 Moderators*  
+
+*Lord Rakesh*
+- wa.me/918473956301
+*Abhi Kunn*
+- wa.me/916006909359`))
     }
 }
