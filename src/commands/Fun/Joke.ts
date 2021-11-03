@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
             .get(`https://v2.jokeapi.dev/joke/Any`)
             .then((response) => {
                 // console.log(response);
-                const text = `📝 *Catagory:* ${response.data.category}\n\n*🎃 Joke:* ${response.data.setup}\n\n*💡 Answer:* ${response.data.delivery}`
+                const text = `*🍃 Joke:* ${response.data.setup}\n\n*🥜 Answer:* ${response.data.delivery}`
                 M.reply(text)
             })
             .catch((err) => {
