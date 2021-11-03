@@ -32,7 +32,7 @@ export default class Command extends BaseCommand {
             else if (this.client.user.jid === user) {
                 text += `❌ Skipped *@${user.split('@')[0]}* as they're me.\n`
             } else {
-                text += `🟥 Removed *@${user.split('@')[0]}*\n`
+                text += `Successfully Removed *@${user.split('@')[0]}*\n`
                 await this.client.groupRemove(M.from, [user])
             }
         })
