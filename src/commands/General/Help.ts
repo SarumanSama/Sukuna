@@ -38,6 +38,7 @@ My perfix - !
 ◍!xp
 ◍!weather
 ◍!crypto
+◍!admins
 ◍!sukuna
 ◍!bot/chat
 
@@ -54,12 +55,13 @@ My perfix - !
 ◍!subred
 ◍!sticker
 ◍!blur
+◍!screenshot
+◍!retrieve
 
 - 🄰🄳🄼🄸🄽
 
 ◍!tagall
 ◍!purge
-◍!admin
 ◍!promote
 ◍!demote
 ◍!remove
@@ -68,7 +70,8 @@ My perfix - !
 ◍!revoke
 ◍!change (sub/desc)
 ◍!nsfw (act/deact)
-◍!events (act/, deact)
+◍!events (act/deact)
+◍!mod (act/deact)
 
 - 🄵🅄🄽
 
