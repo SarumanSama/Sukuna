@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
             .get(`https://animechan.vercel.app/api/random`)
             .then((response) => {
                 // console.log(response);
-                const text = `⛩ *Anime:* ${response.data.anime}\n\n*🎎 Character:* ${response.data.character}\n\n*✏ Quote:* ${response.data.quote}`
+                const text = `🌸 *Anime:* ${response.data.anime}\n\n*🪶 Character:* ${response.data.character}\n\n*🐚 Quote:* ${response.data.quote}`
                 M.reply(text)
             })
             .catch((err) => {
