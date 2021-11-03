@@ -12,7 +12,7 @@ export default class Command extends BaseCommand {
             command: 'husbando',
             description: 'Will send you random husbando image.',
             aliases: ['husbu'],
-            category: 'weeb',
+            category: 'anime',
             usage: `${client.config.prefix}husbando`
         })
     }
@@ -30,7 +30,7 @@ export default class Command extends BaseCommand {
                     MessageType.image,
                     undefined,
                     undefined,
-                    `🌟 Here you go\n`,
+                    `Here is Your Husbu 🍜\n`,
                     undefined
                 ).catch((e) => {
                     console.log(`This error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
