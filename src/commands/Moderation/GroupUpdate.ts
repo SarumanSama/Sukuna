@@ -7,11 +7,11 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             adminOnly: true,
-            command: 'groupchange',
+            command: 'change',
             description: 'Updates the Group Subject or Description.',
             category: 'moderation',
-            aliases: ['gadd', 'gset'],
-            usage: `${client.config.prefix}gset (sub/desc) (value)`,
+            aliases: ['change', 'gset'],
+            usage: `${client.config.prefix}change (sub/desc) (value)`,
             baseXp: 0
         })
     }
