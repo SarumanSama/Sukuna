@@ -21,6 +21,8 @@ export default class Command extends BaseCommand {
 *Lord Rakesh*
 - wa.me/918473956301
 *Abhi Kunn*
-- wa.me/916006909359`))
+- wa.me/916006909359
+*Sam Kun*
+- wa.me/919869214499`))
     }
 }
