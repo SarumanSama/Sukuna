@@ -10,7 +10,7 @@ export default class Command extends BaseCommand {
         super(client, handler, {
             command: 'hi',
             description: 'Say hi to the bot.',
-            category: 'misc',
+            category: 'general',
             usage: `${client.config.prefix}hi`
         })
     }
