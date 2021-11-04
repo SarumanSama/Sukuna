@@ -40,7 +40,7 @@ export default class MessageHandler {
                         return void M.reply(res.data.cnt)
                     })
                     .catch(() => {
-                        M.reply(`Ummmmmmmmm.`)
+                        M.reply(`Gambare Gambare.`)
                     })
             }
         }
@@ -69,7 +69,7 @@ export default class MessageHandler {
                 sender.username
             )} in ${chalk.cyanBright(groupMetadata?.subject || 'DM')}`
         )
-        if (!command) return void M.reply('No Command Found! Try using one from the help list.')
+        if (!command) return void M.reply('_Ah shit man you dont know how to type !help Well fine in that case you die here_.')
         const user = await this.client.getUser(M.sender.jid)
         if (user.ban) return void M.reply("You're Banned from using commands.")
         const state = await this.client.DB.disabledcommands.findOne({ command: command.config.command })
@@ -79,7 +79,7 @@ export default class MessageHandler {
             return void M.reply(`Only MODS are allowed to use this command`)
         }
         if (command.config?.adminOnly && !M.sender.isAdmin)
-            return void M.reply(`Only admins are allowed to use this command`)
+            return void M.reply(`Know Your Place Fool its a admin only command.`)
         try {
             await command.run(M, this.parseArgs(args))
             if (command.config.baseXp) {
