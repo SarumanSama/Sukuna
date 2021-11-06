@@ -27,16 +27,8 @@ export default class Command extends BaseCommand {
             return void M.reply(
                 `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate nsfw to activate nsfw`
             )
-        const notFound = this.client.assets.get('404')
-        const buffer = await request.buffer(res.url).catch((e) => {
-            if (e.message.includes('marker not found')) {
-                this.run(this.run.arguments[0], this.run.arguments[1])
-            }
-            if (e.message.includes('filter type')) {
-                this.run(this.run.arguments[0], this.run.arguments[1])
-            }
             return void M.reply(e.message)
-        }
+        })
         while (true) {
             try {
                 M.reply(
