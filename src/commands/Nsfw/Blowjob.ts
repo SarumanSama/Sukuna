@@ -21,13 +21,11 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage): Promise<void> => {
         // fetch result of https://api.waifu.pics/nsfw/blowjob from the API using axios
         const { data } = await axios.get('https://api.waifu.pics/nsfw/blowjob')
-        const buffer = await request.buffer(data.url).catch((e) => { 
-        const res = response as IBlowjobResponse
+        const buffer = await request.buffer(data.url).catch((e) => {
+        const res = response as IaxiosResponse
         if (res.nsfw && !(await this.client.getGroupData(M.from)).nsfw)
             return void M.reply(
-                `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate nsfw to activate nsfw`
-            )
-            return void M.reply(e.message)
+                `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate nsfw to activate nsfw` )
         })
         while (true) {
             try {
