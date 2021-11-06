@@ -21,11 +21,23 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage): Promise<void> => {
         // fetch result of https://api.waifu.pics/nsfw/blowjob from the API using axios
         const { data } = await axios.get('https://api.waifu.pics/nsfw/blowjob')
-        const buffer = await request.buffer(data.url).catch((e) => {   
-        if (res.blowjob && !(await this.client.getGroupData(M.from)).blowjob)
+        const buffer = await request.buffer(data.url).catch((e) => { 
+        const response = await axiosFetcher(joined.toLowerCase().trim())
+        const res = response as IBlowjobResponse
+        if (res.nsfw && !(await this.client.getGroupData(M.from)).nsfw)
             return void M.reply(
-                `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate blowjob to activate blowjob`
-                }),
+                `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate nsfw to activate nsfw`
+            )
+        const notFound = this.client.assets.get('404')
+        const buffer = await request.buffer(res.url).catch((e) => {
+            if (e.message.includes('marker not found')) {
+                this.run(this.run.arguments[0], this.run.arguments[1])
+            }
+            if (e.message.includes('filter type')) {
+                this.run(this.run.arguments[0], this.run.arguments[1])
+            }
+            return void M.reply(e.message)
+        })
         while (true) {
             try {
                 M.reply(
