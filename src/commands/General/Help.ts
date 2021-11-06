@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
             './assets/videos/Sukuna/sukuna.mp4'
         ]
         let kaoi = n[Math.floor(Math.random() * n.length)]
-        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {
+        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `Konnichiwa! *${M.sender.username}*, *I'm Sukuna!* Know your place Fool.
 
@@ -99,8 +99,7 @@ My perfix - !
 Cᴏᴍɪɴɢ Sᴏᴏɴ 🍑
 <><><><><><><>
 
-Sooooo, My work is done. Bye! 
-Don't Summon Me Again (๑•﹏•)` }
+𝙎𝙤𝙤𝙤𝙤𝙤, 𝙈𝙮 𝙬𝙤𝙧𝙠 𝙞𝙨 𝙙𝙤𝙣𝙚. 𝘽𝙮𝙚! 𝘿𝙤𝙣'𝙩 𝙎𝙪𝙢𝙢𝙤𝙣 𝙈𝙚 𝘼𝙜𝙖𝙞𝙣(๑•﹏•)` }
         )
     }
 }
