@@ -10,8 +10,11 @@ import { MessageType } from '@adiwajshing/baileys'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            aliases: ['bj']
-            `
+            command: 'blowjob',
+            description: 'Will send you random blowjob image.',
+            aliases: ['bj'],
+            category: 'nsfw',
+            usage: `${client.config.prefix}blowjob`
         })
     }
 
@@ -28,7 +31,7 @@ export default class Command extends BaseCommand {
                     MessageType.image,
                     undefined,
                     undefined,
-                    `*ummmm 火*\n`,
+                    `🧧 Well...\n`,
                     undefined
                 ).catch((e) => {
                     console.log(`This error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
