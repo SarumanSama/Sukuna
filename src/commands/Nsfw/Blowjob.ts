@@ -22,7 +22,6 @@ export default class Command extends BaseCommand {
         // fetch result of https://api.waifu.pics/nsfw/blowjob from the API using axios
         const { data } = await axios.get('https://api.waifu.pics/nsfw/blowjob')
         const buffer = await request.buffer(data.url).catch((e) => { 
-        const response = await axiosFetcher(joined.toLowerCase().trim())
         const res = response as IBlowjobResponse
         if (res.nsfw && !(await this.client.getGroupData(M.from)).nsfw)
             return void M.reply(
@@ -37,7 +36,7 @@ export default class Command extends BaseCommand {
                 this.run(this.run.arguments[0], this.run.arguments[1])
             }
             return void M.reply(e.message)
-        })
+        }
         while (true) {
             try {
                 M.reply(
