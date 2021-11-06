@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
         const { data } = await axios.get('https://api.waifu.pics/nsfw/blowjob')
         const buffer = await request.buffer(data.url).catch((e) => {
         const res = response as IblowjobResponse    
-        if (res.blowjob && !(await this.client.getGroupData(M.from)).nsfw)
+        if (res.blowjob && !(await this.client.getGroupData(M.from)).blowjob)
             return void M.reply(
                 `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate blowjob to activate blowjob`
         })
