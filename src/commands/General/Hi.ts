@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
         let kaoi = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {
             mimetype: Mimetype.gif,
-            caption: `☕ *Follow* ```SarumanSama```  *☕*
+            caption: `☕ *Follow* SarumanSama  *☕*
 
 🍃 *Github:* https://github.com/SarumanSama
 
