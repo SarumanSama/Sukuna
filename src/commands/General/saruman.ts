@@ -30,7 +30,7 @@ export default class Command extends BaseCommand {
 
 🌺 *Email:* sarumansama69@gmail.com
 
-🍏 *WhatsApp:* wa.me/` }
+🍏 *WhatsApp:* wa.me/94776264197` }
         )
     }
 }
