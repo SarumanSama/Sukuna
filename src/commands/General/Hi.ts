@@ -17,12 +17,20 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         const n = [
-            './assets/videos/Sukuna/sukuna-hi.mp4'
+            './assets/videos/Sukuna/SarumanSama.mp4'
         ]
         let kaoi = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {
             mimetype: Mimetype.gif,
-            caption: `火 ɠαɱზαɾҽ ɠαɱზαɾҽ 𝘴ꫀꪀρꪖ𝓲.. \n` }
+            caption: `☕ *Follow* ```SarumanSama```  *☕*
+
+🍃 *Github:* https://github.com/SarumanSama
+
+🍒 *YouTube:* https://youtube.com/channel/UCoXVqyvcV6LrlWkhADBDhsg
+
+🌺 *Email:* sarumansama69@gmail.com
+
+🍏 *WhatsApp:* wa.me/` }
         )
     }
 }
