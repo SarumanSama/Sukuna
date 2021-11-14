@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         const n = [
-            './assets/videos/Sukuna/SarumanSama.mp4'
+            './assets/videos/Sukuna/sukuna-hi.mp4'
         ]
         let kaoi = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {
