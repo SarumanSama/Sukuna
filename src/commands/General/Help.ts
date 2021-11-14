@@ -34,6 +34,7 @@ My perfix - !
 ◍!profile
 ◍!hi
 ◍!owner
+◍!saruman
 ◍!support
 ◍!xp
 ◍!weather
