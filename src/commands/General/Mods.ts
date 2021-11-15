@@ -16,13 +16,22 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        return void (await M.reply(`*Sukuna 火 Moderators*  
+        const n = [
+            './assets/videos/Sukuna/SukunaMods.mp4'
+        ]
+        let kaoi = n[Math.floor(Math.random() * n.length)]
+        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {quoted:M.WAMessage,
+            mimetype: Mimetype.gif,
+            caption: `*🪶Sᴜᴋᴜɴᴀ Mᴏᴅᴇʀᴀᴛᴏʀs 🪶*
 
-*SarumanSama*
-- wa.me/94776264197
-*Lord Rakesh*
-- wa.me/918473956301
-*giga---chad*
-- wa.me/noneofyourbuisness`))
+🦅→ ```SarumanSama```
+—> wa.me/94776264197
+
+🦅→ ```Lord Rakesh```
+—> wa.me/8473956301
+
+🦅→ ```Giga Chad```
+—> wa.me/666` }
+        )
     }
 }
