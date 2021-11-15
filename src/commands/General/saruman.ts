@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
             './assets/videos/Sukuna/SarumanSama.mp4'
         ]
         let kaoi = n[Math.floor(Math.random() * n.length)]
-        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {
+        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `☕ *Follow* _SarumanSama_  *☕*
 
