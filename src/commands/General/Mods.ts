@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
             command: 'mods',
             description: 'Shows mods of Sukuna.',
             category: 'general',
-            usage: `${client.config.prefix}Mods`
+            usage: `${client.config.prefix}mods`
         })
     }
 
