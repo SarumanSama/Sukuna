@@ -22,22 +22,19 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
 
-
-
-
 return void M.reply(await request.buffer('https://wallpapercave.com/uwp/uwp1414983.png'),
 MessageType.image,
             undefined,
             undefined,
             `*🪶Sᴜᴋᴜɴᴀ Mᴏᴅᴇʀᴀᴛᴏʀs 🪶* \n
 
-🦅→ ```SarumanSama```
+🦅→ SarumanSama
 —> wa.me/94776264197
 
-🦅→ ```Lord Rakesh```
+🦅→ Lord Rakesh
 —> wa.me/8473956301
 
-🦅→ ```Giga Chad```
+🦅→ Giga Chad
 —> wa.me/666`
 )
 
