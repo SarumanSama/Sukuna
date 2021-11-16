@@ -18,15 +18,14 @@ export default class Command extends BaseCommand {
         })
     }
 
-
-
     run = async (M: ISimplifiedMessage): Promise<void> => {
-
-return void M.reply(await request.buffer('https://wallpapercave.com/uwp/uwp1414983.png'),
-MessageType.image,
-            undefined,
-            undefined,
-            `*🪶Sᴜᴋᴜɴᴀ Mᴏᴅᴇʀᴀᴛᴏʀs 🪶* \n
+        const n = [
+            './assets/videos/Sukuna/sukuna.mp4','/assets/videos/Sukuna/SukunaMods.mp4'
+        ]
+        let kaoi = n[Math.floor(Math.random() * n.length)]
+        return void this.client.sendMessage(M.from, { url: kaoi }, MessageType.video, {quoted:M.WAMessage,
+            mimetype: Mimetype.gif,
+            caption: `*🪶Sᴜᴋᴜɴᴀ Mᴏᴅᴇʀᴀᴛᴏʀs 🪶* \n
 
 🦅→ SarumanSama
 —> wa.me/94776264197
