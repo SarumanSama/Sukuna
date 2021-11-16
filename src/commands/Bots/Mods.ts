@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
         super(client, handler, {
             command: 'mods',
             description: "Displays the Moderators' contact info",
-            category: 'general',
+            category: 'Bots',
             usage: `${client.config.prefix}mods`,
             dm: true,
             aliases: ['moderators', 'mod', 'owner'],
